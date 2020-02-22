@@ -204,7 +204,7 @@ odoo.define('web_m2x_options.web_m2x_options', function (require) {
                             values.push({
                             label: _t("Search More..."),
                             action: function () {
-                                var prom;
+                                var prom = [];
                                 if (search_val !== '') {
                                     prom = self._rpc({
                                         model: self.field.relation,
@@ -219,7 +219,7 @@ odoo.define('web_m2x_options.web_m2x_options', function (require) {
                                     });
                                 }
                                 Promise.resolve(prom).then(function (results) {
-                                    var dynamicFilters;
+                                    var dynamicFilters = [];
                                     if (results) {
                                         var ids = _.map(results, function (x) {
                                             return x[0];
