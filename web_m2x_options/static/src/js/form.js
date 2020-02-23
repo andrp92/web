@@ -346,4 +346,4 @@ odoo.define('web_m2x_options.web_m2x_options', function (require) {
             }
         },
     });
-});
+
